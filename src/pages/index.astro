@@ -45,15 +45,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       <p>
         欢迎来到我的博客！我是加拿大大厨师，一个热爱生活的IT博主，十个菜九个咸，还有一个不放盐的厨子。在这里，我分享我的经验、见解以及生活点滴。无论你是喜欢钓鱼还是喜欢旅行，我希望我的文章能为你提供帮助和启发。
       </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
+
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
