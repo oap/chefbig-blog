@@ -35,6 +35,8 @@ const {
   hideEditPost,
 } = post.data;
 
+const isProd = import.meta.env.PROD;
+
 const { Content } = await render(post);
 
 let ogImageUrl: string | undefined;
@@ -116,6 +118,18 @@ const nextPost =
     >
       <Content />
     </article>
+
+    {isProd && (
+      <div class="my-8">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7844722881093824"
+             data-ad-slot="YOUR_AD_SLOT"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    )}
 
     <hr class="my-8 border-dashed" />
 

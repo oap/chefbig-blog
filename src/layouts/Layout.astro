@@ -28,6 +28,8 @@ const {
   scrollSmooth = false,
 } = Astro.props;
 
+const isProd = import.meta.env.PROD;
+
 const socialImageURL = new URL(ogImage, Astro.url);
 
 const structuredData = {
@@ -143,6 +145,14 @@ const structuredData = {
     }
 
     <ClientRouter />
+
+    {isProd && (
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7844722881093824"
+        crossorigin="anonymous"
+      ></script>
+    )}
 
     <script is:inline src="/toggle-theme.js"></script>
   </head>
